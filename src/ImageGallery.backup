@@ -1,0 +1,193 @@
+// src/ImageGallery.jsx
+import React, { useState } from 'react';
+
+import start from './img/start.png';
+import start_sel from './img/start_sel.png';
+import main from './img/main.png';
+import main_highlight from './img/main_highlight.png';
+import main_sel from './img/main_sel.png';
+import info from './img/info.png';
+import info_highlight from './img/info_highlight.png';
+import info_sel from './img/info_sel.png';
+import fav from './img/fav.png';
+import fav_highlight from './img/fav_highlight.png';
+import fav_sel from './img/fav_sel.png';
+import socials from './img/socials.png';
+import socials_highlight from './img/socials_highlight.png';
+import socials_sel from './img/socials_sel.png';
+import taskbar from './img/taskbar.png';
+import time from './img/time.png';
+
+export default function ImageGallery() {
+  const [isHovered, setIsHovered] = useState(false);
+  const [isHovered2, setIsHovered2] = useState(false);
+  const [isHovered3, setIsHovered3] = useState(false);
+  const [isHovered4, setIsHovered4] = useState(false);
+  const [isHovered5, setIsHovered5] = useState(false);
+  
+  const [activePage, setActivePage] = useState("main");
+
+  // BOTH BUTTONS
+  const cardBaseStyle = {
+    height: '30px',
+    cursor: 'pointer',
+    backgroundSize: 'cover',
+    backgroundPosition: 'center',
+  };
+  
+  // TIME
+  const topRightBoxStyle = {
+    position: 'fixed',    
+    top: '0px',           
+    right: '0px',         
+    width: '129px',       
+    height: '30px',
+    zIndex: 9999,         
+    backgroundImage: "url(" + time + ")", 
+    cursor: 'default',    
+  };
+  
+  const fullScreenLayerStyle = {
+    position: 'fixed',
+    top: 0,
+    left: 0,
+    width: '100vw',
+    height: '30px',
+    zIndex: 1,                      
+    backgroundImage: "url(" + taskbar + ")",
+    backgroundSize: '100% 100%',        
+    backgroundPosition: 'center',   
+    pointerEvents: 'none',          
+  };
+
+
+  // START BUTTON
+  const boxStyle = {
+    ...cardBaseStyle,
+    width: '106px',
+    backgroundImage: "url(" + (isHovered ? start_sel : start) + ")",
+  };
+
+  // MAIN PAGE BUTTON
+  const boxStyle2 = {
+    ...cardBaseStyle,
+    width: '160px', 
+    // 🌟 If active page is "main", stay pressed (main_sel). Otherwise, check for hover.
+  backgroundImage: "url(" + (activePage === "main" ? main_sel : (isHovered2 ? main_highlight : main)) + ")",
+	cursor: activePage === "main" ? "default" : "pointer", 
+  };
+  
+  // INFO BUTTON
+  const boxStyle3 = {
+    ...cardBaseStyle,
+    width: '160px',
+	  // 🌟 If active page is "info", stay pressed (main_sel). Otherwise, check for hover.
+  backgroundImage: "url(" + (activePage === "info" ? info_sel : (isHovered3 ? info_highlight : info)) + ")",
+  	cursor: activePage === "info" ? "default" : "pointer", 
+  };
+  
+  // MUSIC BUTTON
+  const boxStyle4 = {
+    ...cardBaseStyle,
+    width: '160px',
+    backgroundImage: "url(" + (activePage === "fav" ? fav_sel : (isHovered4 ? fav_highlight : fav)) + ")",
+	cursor: activePage === "fav" ? "default" : "pointer", 
+  };
+  
+  // SOCIALS BUTTON
+  const boxStyle5 = {
+    ...cardBaseStyle,
+    width: '160px',
+    backgroundImage: "url(" + (activePage === "socials" ? socials_sel : (isHovered5 ? socials_highlight : socials)) + ")",
+	cursor: activePage === "socials" ? "default" : "pointer", 
+  };
+
+  return (
+    <>
+<div style={fullScreenLayerStyle} />
+
+	{/* 🟢 1. Added the missing opening fragment tag here */}
+      <div style={{ 
+        position: 'fixed', 
+        left: '0px', 
+        top: '0px', 
+        zIndex: 9999,
+        display: 'flex', 
+      }}>
+        
+        {/* START BUTTON */}
+        <div 
+          style={boxStyle}
+          onMouseEnter={() => setIsHovered(true)}
+          onMouseLeave={() => setIsHovered(false)}
+		  onClick={() => alert("nothing to see here")} 
+        />
+
+        {/* MAIN PAGE BUTTON */}
+        <div 
+          style={boxStyle2}
+          onMouseEnter={() => setIsHovered2(true)}
+          onMouseLeave={() => setIsHovered2(false)}
+		  onClick={() => setActivePage("main")}
+        />
+        
+        {/* INFO BUTTON */}
+        <div 
+          style={boxStyle3}
+          onMouseEnter={() => setIsHovered3(true)}
+          onMouseLeave={() => setIsHovered3(false)}
+		  onClick={() => setActivePage("info")}
+        />
+        
+        {/* MUSIC BUTTON */}
+        <div 
+          style={boxStyle4}
+          onMouseEnter={() => setIsHovered4(true)}
+          onMouseLeave={() => setIsHovered4(false)}
+		  onClick={() => setActivePage("fav")}
+        />
+        
+        {/* SOCIALS BUTTON */}
+        <div 
+          style={boxStyle5}
+          onMouseEnter={() => setIsHovered5(true)}
+          onMouseLeave={() => setIsHovered5(false)}
+		  onClick={() => setActivePage("socials")}
+        />
+
+      </div>
+	  
+	  {/* 🟢 THIS TEXT SHOWS ON THE MAIN PAGE ONLY */}
+        {activePage === "main" && (
+          <div>
+            <h1 style={{ marginTop: '30px' }}>MAIN PAGE</h1>
+          </div>
+        )}
+		
+		  {/* 🔵 THIS TEXT SHOWS ON THE INFO PAGE ONLY */}
+  {activePage === "info" && (
+    <div>
+      {/* YOU CAN PERSONALIZE EVERYTHING INSIDE THESE BRACKETS NOW */}
+      <h1 style={{ marginTop: "30px" }}>INFO PAGE</h1>
+    </div>
+  )}
+  
+  {/* 🟢 THIS TEXT SHOWS ON THE FAV PAGE ONLY */}
+        {activePage === "fav" && (
+          <div>
+            <h1 style={{ marginTop: '30px' }}>FAV PAGE</h1>
+          </div>
+        )}
+		
+		{/* 🟢 THIS TEXT SHOWS ON THE SOCIALS PAGE ONLY */}
+        {activePage === "socials" && (
+          <div>
+            <h1 style={{ marginTop: '30px' }}>SOCIALS PAGE</h1>
+          </div>
+        )}
+      
+      {/* 🖼️ Completely Static Top Right Image Card */}
+      <div style={topRightBoxStyle} />
+    </> /* 🟢 2. This closing tag is now perfectly balanced */
+  );
+}
