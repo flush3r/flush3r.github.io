@@ -222,7 +222,7 @@ React.useEffect(() => {
                   <p style={{ color: '#f38ba8', fontFamily: 'inherit' }}>• я довольно часто использовал ии для создания этого сайта, так как абсолютно НИЧЕГО не знаю о vite/react/итд. все скриншоты, которые вы видите, были сделаны мной на настоящей виртуальной машине с windows xp! <i>(только не думайте что я фанат ии)</i></p>
                   <p>• время на панели задач вверху справа — это мое <b>текущее реальное время!</b></p>
                   <p>• если вы используете vencord — используйте <b>USRBG</b>, <b>Decor</b> и <b>3y3 profile encoding</b>, когда находитесь на моем профиле</p>
-                  <p>• аватарка — <a href={pfp} target="_blank" rel="noreferrer">rnd из dandy's world</a></p>
+                  <p>• аватарка — <a href={pfp} target="_blank" rel="noreferrer">connie из dandy's world</a></p>
                   <p>• мои любимые игры — <a href="https://www.roblox.com/games/9292879820/Grass-Cutting-Incremental" target="_blank" rel="noreferrer">gci</a> и <a href="https://www.roblox.com/games/15873244701/The-Eternal-Abyss" target="_blank" rel="noreferrer">tea</a> <i>(обе на роблоксе)</i></p>
                   <p>• мой любимый цвет — <span style={{ color: '#cba6f7', fontFamily: 'inherit', fontSize: 'inherit' }}>фиолетовый</span></p>
                   <p>• я ленивый перфекционист. меня вдохновляет что-то, из-за чего мне хочется над чем-то поработать, но когда я начинаю, я легко сдаюсь и мне это не нравится</p>
@@ -232,7 +232,7 @@ React.useEffect(() => {
                   <p style={{ color: '#f38ba8', fontFamily: 'inherit' }}>• i used ai quite a bit to make this website, since i dont know ANYTHING about vite/react/etc. all of the screenshots you see were made by me on a real windows xp virtual machine! <i>(though please dont think that im an ai bro)</i></p>
                   <p>• the time on the taskbar on the top right is my <b>current real time!</b></p>
                   <p>• if you use vencord - use <b>USRBG</b>, <b>Decor</b> and <b>3y3 profile encoding</b> when being on my profile</p>
-                  <p>• pfp is <a href={pfp} target="_blank" rel="noreferrer">rnd from dandys world</a></p>
+                  <p>• pfp is <a href={pfp} target="_blank" rel="noreferrer">connie from dandys world</a></p>
                   <p>• my favorite games are <a href="https://www.roblox.com/games/9292879820/Grass-Cutting-Incremental" target="_blank" rel="noreferrer">gci</a> & <a href="https://www.roblox.com/games/15873244701/The-Eternal-Abyss" target="_blank" rel="noreferrer">tea</a> <i>(both on roblox)</i></p>
                   <p>• my favorite color is <span style={{ color: '#cba6f7', fontFamily: 'inherit', fontSize: 'inherit' }}>purple</span></p>
                   <p>• im a lazy perfectionist. sometimes i want to work on something, but when i do i give up easily</p>
@@ -248,28 +248,24 @@ React.useEffect(() => {
             <div className={txtCls + (startBtnImg === start_r ? " ru-text" : "")} style={txSt}>
               {startBtnImg === start_r ? (
                 <>
-                  <p>мне нравится dariacore и atmospheric dnb | <b>последнее обновление: 18.06.2026 (ДД.ММ.ГГГГ)</b></p>
-                  <p>• leroy - <a href="https://soundcloud.com/c0ncernn/sets/dariacore" target="_blank" rel="noreferrer">go white enby go, 1235</a></p>
-                  <p>• goreshit - <a href="https://www.youtube.com/watch?v=pk5F3q5UiWQ" target="_blank" rel="noreferrer">toromi hearts 2</a></p>
+                  <p>мне нравится atmospheric dnb и hardcore edm <i>(но не всё)</i> | <b>последнее обновление: 03.07.2026 (ДД.ММ.ГГГГ)</b></p>
+				  <p>• telemist - <a href="https://www.youtube.com/watch?v=2uP8Pmvc73A" target="_blank" rel="noreferrer">peanut butter jelly time 2020</a></p>
+				  <p>• iwakura - <a href="https://www.youtube.com/watch?v=KNH_DC5zdTI" target="_blank" rel="noreferrer">silent hill</a></p>
                   <p>• cynthoni - <a href="https://www.youtube.com/watch?v=V7aatTu-WdM" target="_blank" rel="noreferrer">dancing dots</a></p>
-                  <p>• mameyudoufu - <a href="https://www.youtube.com/watch?v=vVPfDR24MAE" target="_blank" rel="noreferrer">quality control</a></p>
                   <br />
                   <p>мне также нравится спокойная музыка:</p>
                   <p>• us golf 95 - <a href="https://www.youtube.com/watch?v=ffU10HOlJGY" target="_blank" rel="noreferrer">broadcast</a></p>
-                  <p>• IACON - <a href="https://www.youtube.com/watch?v=URC4F1DF-3I" target="_blank" rel="noreferrer">RETURN</a></p>
                   <p>• windows96 - <a href="https://windows96.bandcamp.com/album/how-to-see-through-walls" target="_blank" rel="noreferrer">near death experience, spirals, new midsts acid,</a> <a href="https://windows96.bandcamp.com/album/empty-hiding-world" target="_blank" rel="noreferrer">the fool</a></p>
                 </>
               ) : (
                 <>
-                  <p>i enjoy dariacore and atmospheric dnb | <b>last updated: 18.06.2026 (DD.MM.YYYY)</b></p>
-                  <p>• leroy - <a href="https://soundcloud.com/c0ncernn/sets/dariacore" target="_blank" rel="noreferrer">go white enby go, 1235</a></p>
-                  <p>• goreshit - <a href="https://www.youtube.com/watch?v=pk5F3q5UiWQ" target="_blank" rel="noreferrer">toromi hearts 2</a></p>
+                  <p>i enjoy atmospheric dnb & hardcore edm <i>(but not all of it)</i> | <b>last updated: 03.07.2026 (DD.MM.YYYY)</b></p>
+				  <p>• telemist - <a href="https://www.youtube.com/watch?v=2uP8Pmvc73A" target="_blank" rel="noreferrer">peanut butter jelly time 2020</a></p>
+				  <p>• iwakura - <a href="https://www.youtube.com/watch?v=KNH_DC5zdTI" target="_blank" rel="noreferrer">silent hill</a></p>
                   <p>• cynthoni - <a href="https://www.youtube.com/watch?v=V7aatTu-WdM" target="_blank" rel="noreferrer">dancing dots</a></p>
-                  <p>• mameyudoufu - <a href="https://www.youtube.com/watch?v=vVPfDR24MAE" target="_blank" rel="noreferrer">quality control</a></p>
                   <br />
                   <p>i also enjoy calm music:</p>
                   <p>• us golf 95 - <a href="https://www.youtube.com/watch?v=ffU10HOlJGY" target="_blank" rel="noreferrer">broadcast</a></p>
-                  <p>• IACON - <a href="https://www.youtube.com/watch?v=URC4F1DF-3I" target="_blank" rel="noreferrer">RETURN</a></p>
                   <p>• windows96 - <a href="https://windows96.bandcamp.com/album/how-to-see-through-walls" target="_blank" rel="noreferrer">near death experience, spirals, new midsts acid,</a> <a href="https://windows96.bandcamp.com/album/empty-hiding-world" target="_blank" rel="noreferrer">the fool</a></p>
                 </>
               )}

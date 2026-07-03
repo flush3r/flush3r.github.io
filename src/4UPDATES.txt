@@ -1,0 +1,7 @@
+1. if updating your .gitignore, do 
+git rm --cached file_name (for instance if you wanna stop git tracking src/hi.txt just replace file_name with that)
+git commit -m "stops tracking file_name"
+git push origin main
+
+2. updating website:
+npm run deploy
