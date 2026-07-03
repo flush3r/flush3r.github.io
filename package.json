@@ -9,7 +9,7 @@
     "lint": "eslint .",
     "preview": "vite preview",
     "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist -b main"
+    "deploy": "gh-pages -d dist -b development"
   },
   "dependencies": {
     "@react-three/drei": "^10.7.7",
